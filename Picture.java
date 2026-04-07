@@ -698,21 +698,21 @@ public final class Picture implements ActionListener {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-    //     //Picture baboon = new Picture(args[0]);
-    //    //Picture newpic = new Picture(298, 298);
-    //    // for (int i = 0; i < baboon.height(); i++) {
-    //         for (int j = 0; j < baboon.width(); j++) {
-    //            Color color = baboon.get(j,i);
-    //         int red = color.getRed();
-    //         int blue = color.getBlue();
-    //         int green = color.getGreen(); 
-    //         Color newColor = new Color(blue, green, red);
-    //             newpic.set(j, i, newColor);
-    //         }
+        Picture baboon = new Picture("baboon.jpg");
+       Picture newpic = new Picture(298, 298);
+       for (int i = 0; i < baboon.height(); i++) {
+            for (int j = 0; j < baboon.width(); j++) {
+               Color color = baboon.get(j,i);
+            int red = color.getRed();
+            int blue = color.getBlue();
+            int green = color.getGreen(); 
+            Color newColor = new Color(blue, green, red);
+                newpic.set(j, i, newColor);
+            }
 
-    //     }
+       }
 
-        // newpic.show();
+        newpic.show();
         Picture original = new Picture("peppers.jpg");
         int width = original.width;
         int height = original.height;
