@@ -737,6 +737,21 @@ public final class Picture implements ActionListener {
                 }
             }
             flipped.show();
+
+            Picture greyscale = new Picture(width, height);
+            for (int row = 0; row < height; row++) {
+                for (int col = 0; col < width; col++) {
+                    Color color = original.get(col, row);
+                    int red = color.getRed();
+                    int green = color.getGreen();
+                    int blue = color.getBlue();
+                    int grey = (red+blue+green)/3;
+                    Color greyColor = new Color(grey,grey,grey);
+                    greyscale.set(col, row, greyColor);
+                }
+            }
+            greyscale.show();
+            
     }
 
 }
